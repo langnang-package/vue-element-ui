@@ -1,7 +1,6 @@
-import Vue from 'vue'
-
 const path = require('path')
 const files = require.context('/packages', true, /\.vue$/)
+console.log(files.keys())
 const components = files.keys().reduce((total, key) => {
   if (path.basename(key, '.vue') !== 'index') return total
   // 组件名
@@ -29,9 +28,9 @@ if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
 
-Vue.use({
+export default {
   // 导出的对象必须具备一个 install 方法
   install,
   // 组件列表
   ...components,
-});
+}
