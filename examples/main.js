@@ -1,14 +1,13 @@
 import Vue from "vue";
 import App from "@/layout";
 import router from "@/router";
+import components from "@/components"
 import '@/plugins'
 import '@/directives'
 import '@/filters'
-import VueUI from './../packages'
 
 Vue.config.productionTip = false;
-
-Vue.use(VueUI)
+Vue.use(components)
 new Vue({
   router,
   render: (h) => h(App),
