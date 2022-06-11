@@ -4,11 +4,11 @@ import router from "@/router";
 import '@/plugins'
 import '@/directives'
 import '@/filters'
-import VueElementUI from "./../packages";
+import VueUI from './../packages'
 
 Vue.config.productionTip = false;
 
-Vue.use(VueElementUI)
+Vue.use(VueUI)
 new Vue({
   router,
   render: (h) => h(App),

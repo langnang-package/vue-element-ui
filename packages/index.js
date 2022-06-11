@@ -1,6 +1,5 @@
 const path = require('path')
-const files = require.context('/packages', true, /\.vue$/)
-console.log(files.keys())
+const files = require.context('./', true, /\.vue$/)
 const components = files.keys().reduce((total, key) => {
   if (path.basename(key, '.vue') !== 'index') return total
   // 组件名
