@@ -6,7 +6,7 @@ name: Node.js Beta Package
 on:
   push:
     branches:
-      - "@beta"
+      - "@next"
 
 jobs:
   build:
@@ -29,6 +29,6 @@ jobs:
           node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish --tag beta --access public
+      - run: npm publish --tag next --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
