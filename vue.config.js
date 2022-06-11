@@ -1,6 +1,6 @@
 module.exports = {
   outputDir: "dist",
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-ui-package/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-element-ui/" : "/",
   devServer: {
     port: 8080, // 自定义端口
   },
