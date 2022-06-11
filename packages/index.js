@@ -1,7 +1,5 @@
-import Vue from 'vue'
-
 const path = require('path')
-const files = require.context('/packages', true, /\.vue$/)
+const files = require.context('./', true, /\.vue$/)
 const components = files.keys().reduce((total, key) => {
   if (path.basename(key, '.vue') !== 'index') return total
   // 组件名

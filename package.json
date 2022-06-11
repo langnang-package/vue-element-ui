@@ -2,10 +2,11 @@
   "name": "@langnang/vue-ui-package",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/vue-ui-package.umd.min.js",
   "scripts": {
     "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib packages/index.js",
+    "build:example": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
