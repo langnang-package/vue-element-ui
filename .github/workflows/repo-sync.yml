@@ -18,7 +18,7 @@ jobs:
       - name: repo-sync
         uses: repo-sync/github-sync@v2
         with:
-          source_repo: "langnang-temp/npm-package"
-          source_branch: "@langnang-temp/npm-package"
-          destination_branch: "@langnang-temp/npm-package"
+          source_repo: "langnang-temp/vue-ui-package"
+          source_branch: "@langnang-temp/vue-ui-package"
+          destination_branch: "@langnang-temp/vue-ui-package"
           github_token: ${{ secrets.GITHUB_TOKEN }}
