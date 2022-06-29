@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: 'ElRouteMenuItem',
+  name: 'ElDynamicNavMenuItem',
   props: {
     icon: {
       type: String,

@@ -1,22 +1,24 @@
 <template>
   <el-menu v-bind="$attrs" router>
-    <ElRouteMenuItem v-for="item in data" :key="item.path" v-bind="item" />
+    <ElDynamicNavMenuItem v-for="item in data" :key="item.path" v-bind="item" />
   </el-menu>
 </template>
 <script>
-import ElRouteMenuItem from './item.vue'
+import ElDynamicNavMenuItem from './item.vue'
 export default {
-  name: 'ElRouteMenu',
+  name: 'ElDynamicNavMenu',
   components: {
-    ElRouteMenuItem
+    ElDynamicNavMenuItem
   },
   props: {
-    // 路由配置
+    // 菜单配置
     data: {
       type: Array,
-      default() {
-        return []
-      }
+      default: () => []
+    },
+    props: {
+      type: Object,
+      default: () => ({ value: 'value', label: 'label' })
     }
   },
   date() {

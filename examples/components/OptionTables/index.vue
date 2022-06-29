@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
+    <h1>
+      {{title}}
+      <small>{{subTitle}}</small>
+    </h1>
     <p>{{description}}</p>
     <slot></slot>
     <div>
@@ -28,7 +31,7 @@
 <script>
 export default {
   name: "OptionTables",
-  props: ['title', 'description'],
+  props: ['title', 'subTitle', 'description'],
   created() {
   },
   filters: {
